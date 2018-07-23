@@ -10,9 +10,13 @@ declare var Snap: any;
 export class HomeComponent implements OnInit {
 
   constructor() { }
+    
+    getStarted() {
+        
+    }
 
   ngOnInit() {
-      let $canvas = document.getElementById('container'), 
+      let $canvas = document.getElementById('container'),
           s = Snap($canvas),
           planetka = Snap('#planetka'),
           gwiazdki = Snap('#gwiazdki');
@@ -26,14 +30,14 @@ export class HomeComponent implements OnInit {
         // Center elements
         let centerEls = function() {
         //	Store centers of elements
-            planetka.center = getElementCenter(planetka)
-            gwiazdki.center = getElementCenter(gwiazdki)
+            planetka.center = getElementCenter(planetka);
+            gwiazdki.center = getElementCenter(gwiazdki);
             
-            planetka.transform('translate('+planetka.center.x+','+planetka.center.y+') ');
-        }();
+            planetka.transform('translate(' + planetka.center.x + ',' + planetka.center.y+') ');
+        };
 
         // Center elements on window resize
-        window.onresize = function(){ 
+        window.onresize = function(){
             centerEls();
         };
 

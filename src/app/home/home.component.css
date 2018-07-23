@@ -1,6 +1,6 @@
 .container {
     max-width: 1200px;
-    height: 100vh;
+    height: calc(100vh - 120px);
     margin: auto;
     padding: 50px 100px;
     overflow: hidden;
@@ -46,4 +46,17 @@ h1 {
 .container {
     font-family: 'Roboto', sans-serif;
     padding: 50px 100px;
+}
+
+.btn-wrap {
+    margin-top: 50px
+}
+
+.gradient-btn {
+    background: linear-gradient(to right, #5BDFF3 , #333CC9);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    padding: 10px 20px;
+    border-radius: 50px
 }
