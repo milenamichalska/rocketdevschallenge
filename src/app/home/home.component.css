@@ -1,0 +1,49 @@
+.container {
+    max-width: 1200px;
+    height: 100vh;
+    margin: auto;
+    padding: 50px 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+svg {
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px
+}
+
+h1 {
+    font-size: 4em
+}
+
+.navlink {
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 50px;
+    font-weight: bold;
+    color: #292B2D;
+    
+}
+
+.content {
+    font-family: 'Space Mono', monospace;
+    color: #292B2D;
+}
+.accent {
+    color: #4483DB;
+}
+
+.container {
+    font-family: 'Roboto', sans-serif;
+    padding: 50px 100px;
+}

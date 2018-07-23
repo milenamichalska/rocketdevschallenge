@@ -1,4 +1,23 @@
-<div class="container">
+<div class="container" id="container">
+    
+    <nav>
+        <div class="logo">
+            <img src="../../assets/RocketLogo.svg" width="50" height="50">
+        </div>
+        <div class="nav-links">
+            <a class="navlink" routerLink="/pricing">PRICING</a>
+            <a class="navlink" routerLink="/how-to">HOW IT WORKS</a>
+            <a class="navlink" routerLink="/support">SUPPORT</a>
+        </div>
+    </nav>
+    <div class="content">
+        <h1>Launch off today<br> with Rocket<span class="accent">Devs</span></h1>
+        <p>A World-leading platform in organic<br> Social media growth. Get started today<br> & Reach audiences who care.</p>
+        <div class="btn-wrap">
+            <button class="gradient-btn" (click)="getStarted()">Get started</button>
+        </div>
+    </div>
+    
     <svg
        xmlns:dc="http://purl.org/dc/elements/1.1/"
        xmlns:cc="http://creativecommons.org/ns#"
@@ -3524,23 +3543,6 @@
         <use xlink:href="#gwiazdki"/>
     
     </svg>
-    <nav>
-        <div class="logo">
-            <img src="../../assets/RocketLogo.svg" width="50" height="50">
-        </div>
-        <div class="nav-links">
-            <a routerLink="/pricing">PRICING</a>
-            <a routerLink="/how-to">HOW IT WORKS</a>
-            <a routerLink="/support">SUPPORT</a>
-        </div>
-    </nav>
-    <div class="content">
-        <h1>Launch off today with Rocket<span class="accent">Devs</span></h1>
-        <p>A World-leading platform in organic Social media growth. Get started today & Reach audiences who care.</p>
-        <div class="btn-wrap">
-            <button class="gradient-btn" (click)="getStarted()">Get started</button>
-        </div>
-    </div>
 </div>
 
 <script src="https://cdn.rawgit.com/adobe-webplatform/Snap.svg/master/dist/snap.svg-min.js"></script>

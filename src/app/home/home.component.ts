@@ -12,20 +12,23 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-      let $canvas = document.getElementById('svg5917'), 
+      let $canvas = document.getElementById('container'), 
           s = Snap($canvas),
-          planetka = Snap('#planetka');
+          planetka = Snap('#planetka'),
+          gwiazdki = Snap('#gwiazdki');
 
     $canvas.style.opacity = "1";
 
     // Sizes
     planetka.size = planetka.getBBox();
+    gwiazdki.size = gwiazdki.getBBox();
 
         // Center elements
         let centerEls = function() {
         //	Store centers of elements
             planetka.center = getElementCenter(planetka)
-            console.log(planetka.center)
+            gwiazdki.center = getElementCenter(gwiazdki)
+            
             planetka.transform('translate('+planetka.center.x+','+planetka.center.y+') ');
         }();
 
@@ -35,8 +38,9 @@ export class HomeComponent implements OnInit {
         };
 
         s.mousemove(function(e){
-            planetka.transform(	'translate('+(e.pageX/24+(planetka.center.x))+ // Align to X
+            planetka.transform(	'translate('+(e.pageX/32+(planetka.center.x))+ // Align to X
                             ' '+planetka.center.y+')');	// Align to center Y
+            gwiazdki.transform(	'translate('+e.pageX/100+' 55)');
         });
 
         function getElementCenter(el) {
@@ -45,7 +49,7 @@ export class HomeComponent implements OnInit {
                 windowY = el.size.y;
 
             return {
-                'x'	: windowX + 150,
+                'x'	: windowX + 200,
                 'y'	: windowY - el.size.height
             }
         }
